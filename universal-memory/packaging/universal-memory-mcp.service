@@ -1,0 +1,12 @@
+[Unit]
+Description=Universal Memory MCP HTTP endpoint (127.0.0.1:8787)
+Documentation=file:%h/universal-memory/README.md
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/universal-memory serve
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
